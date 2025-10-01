@@ -2,72 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dona's Website!</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-      background-color: #ffe4ec; /* light pink */
-      color: #333;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-      background-color: #ffb6c1;
-      border-radius: 8px;
-      margin-bottom: 30px;
-    }
-    header h1 {
-      margin: 0;
-      color: #fff;
-    }
-    nav {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-      color: #d6336c;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .review {
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .review h2 {
-      margin-top: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Dona's Website!</h1>
+    <h1>Dona’s Website!</h1>
   </header>
 
   <nav>
-    <a href="#week01">Week 01</a>
+    <a href="week1.html">Week 01</a>
+    <a href="week2.html">Week 02</a>
   </nav>
 
-  <div class="review" id="week01">
-    <h2>Week 01: As We May Think (1945)</h2>
-    <p><a href="https://www.theatlantic.com/magazine/archive/1945/07/as-we-may-think/303881/" target="_blank">Read the original article here</a></p>
-    <h3>Summary</h3>
-    <p>
-      Vannevar Bush’s 1945 essay "As We May Think" predicts many technologies we now use daily, like personal computers, hypertext, and search engines. Bush imagined tools that would extend human memory and knowledge, making information more accessible and boosting scientific progress.
-    </p>
-    <h3>My Thoughts</h3>
-    <p>
-      It was fascinating to read how optimistic Bush was about technology right after WWII. Many of his ideas foreshadowed the digital world we live in today. I especially thought about how his vision of the “memex” connects to modern computers and the internet. At the same time, the article doesn’t fully address the potential downsides of advanced technology—something we wrestle with a lot today.
-    </p>
+  <div class="review">
+    <h2>Welcome!</h2>
+    <p>This is where I share weekly thoughts & readings 🌸</p>
   </div>
+
+  <!-- Falling cherry blossom script -->
+  <script src="https://cdn.jsdelivr.net/gh/natsuneko-laboratory/sakura-js@1.0.2/dist/sakura.min.js"></script>
+  <script>
+    new Sakura('body');
+  </script>
 </body>
 </html>
+
