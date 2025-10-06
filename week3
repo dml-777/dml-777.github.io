@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dona's Website! - Week 3</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Dona's Website!</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="week1.html">Week 01</a>
+    <a href="week2.html">Week 02</a>
+    <a href="week3.html">Week 03</a>
+  </nav>
+
+  <div class="review" id="week03">
+    <h2>Week 03: The Medium is the Message</h2>
+    <p><strong>Reading:</strong> Marshall McLuhan, "The Medium is the Message"</p>
+
+    <h3>Summary</h3>
+    <p>McLuhan’s essay explains how the way we communicate matters more than what we’re communicating. The “medium”—whether it's television, social media, or print—shapes our behavior, habits, and even society. Each new medium shifts our attention and thinking, regardless of the content it carries. It’s not the message that changes us—it’s the medium itself.</p>
+
+    <h3>My Thoughts</h3>
+    <p>I never really thought about how technology affects us until I read this. McLuhan makes you realize that we’re constantly adapting to new platforms without really questioning their impact. Even simple things like texting vs. calling totally change the way we interact. It made me think differently about the tools I use every day.</p>
+  </div>
+
+  <!-- Falling petals 🌸 -->
+  <script src="https://cdn.jsdelivr.net/gh/natsuneko-laboratory/sakura-js@1.0.2/dist/sakura.min.js"></script>
+  <script>
+    new Sakura('body', {
+      colors: [
+        {
+          gradientColorStart: 'rgba(255,183,197, 0.9)',
+          gradientColorEnd: 'rgba(255,197,208, 0.9)',
+          gradientColorDegree: 120
+        }
+      ],
+      delay: 300,
+      speed: 2,
+      maxSize: 14,
+      minSize: 9,
+      fallSpeed: 1.5
+    });
+  </script>
+</body>
+</html>
