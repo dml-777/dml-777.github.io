@@ -1,0 +1,551 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f7f4f1;
+  color: #8f1d2c;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  color: #8f1d2c;
+  text-decoration: none;
+}
+
+/* LANDING PAGE */
+
+.landing-body {
+  min-height: 100vh;
+}
+
+.landing-page {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 3.5rem 0 5rem;
+}
+
+.landing-hero {
+  max-width: 900px;
+  margin: 0 auto 3.5rem auto;
+  text-align: center;
+}
+
+.landing-title {
+  font-size: clamp(3.2rem, 6vw, 5.8rem);
+  line-height: 0.95;
+  margin-bottom: 0.95rem;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.landing-copy {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+.landing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.landing-card {
+  border: 2px solid #8f1d2c;
+  padding: 1.2rem 1.5rem;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.landing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(143, 29, 44, 0.08);
+}
+
+.landing-card h2 {
+  font-size: 1.15rem;
+  line-height: 1.05;
+  margin: 0.4rem 0 0.7rem;
+}
+
+.landing-card p {
+  font-size: 0.95rem;
+    line-height: 1.55;
+  max-width: 38ch;
+  margin: 0;
+}
+.card-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.5rem;
+}
+
+/* SHARED PAGES */
+
+.page {
+  width: min(1080px, 88%);
+  margin: 0 auto;
+  padding: 2rem 0 3.5rem;
+}
+
+.hero {
+  max-width: 760px;
+  margin-bottom: 1.25rem;
+}
+
+.eyebrow {
+  font-size: 1rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.95;
+  margin-bottom: 0.8rem;
+}
+
+.intro {
+  font-size: 1.15rem;
+  max-width: 680px;
+  margin-bottom: 1.6rem;
+}
+
+.site-nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.site-nav a {
+  font-size: 1.02rem;
+  position: relative;
+  padding-bottom: 0.2rem;
+  transition: opacity 0.25s ease;
+}
+
+.site-nav a:hover {
+  opacity: 0.75;
+}
+.site-nav a::after,
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #8f1d2c;
+  transition: width 0.3s ease;
+}
+
+.site-nav a:hover::after,
+.active-link::after {
+  width: 100%;
+}
+.divider {
+  width: 100%;
+  height: 2px;
+  background: #8f1d2c;
+  margin: 1.5rem 0 2rem;
+}
+
+.section-label,
+.card-label {
+  font-size: 0.95rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.gallery-section,
+.art-section {
+  margin-top: 1rem;
+}
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  margin-top: 1.5rem;
+}
+
+.about-card {
+  border: 2px solid #8f1d2c;
+  padding: 1.75rem;
+  background: transparent;
+}
+
+.about-card h2 {
+  font-size: 1.7rem;
+  line-height: 1.05;
+  margin: 0.6rem 0 1rem;
+  position: relative;
+}
+
+.about-card h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 180px;
+  height: 2.25px;
+  background: #8f1d2c;
+}
+
+.about-card p {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  margin-bottom: 0.9rem;
+  max-width: 60ch;
+}
+
+.about-intro {
+  max-width: 680px;
+  font-size: 1.08rem;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+.about-contact {
+  grid-column: 1 / -1;
+}
+
+.about-contact a {
+  text-decoration: underline;
+}
+
+/* GALLERY */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 1.25rem;
+}
+.gallery-item {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.35s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+}
+
+.gallery-item img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 2px solid #8f1d2c;
+  transition: transform 0.45s ease, opacity 0.35s ease, filter 0.35s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+  opacity: 0.95;
+  filter: contrast(1.05);
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  z-index: 999;
+}
+
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+}
+
+.modal-content {
+  position: relative;
+  z-index: 2;
+  width: min(1000px, 90%);
+  max-height: 85vh;
+  overflow: auto;
+  margin: 5vh auto;
+  background: #f7f4f1;
+  border: 2px solid #8f1d2c;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 1.25rem;
+  transform: translateY(18px);
+  transition: transform 0.35s ease;
+}
+
+.modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-image-wrap img {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+}
+
+.modal-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+  color: #8f1d2c;
+}
+
+.modal-text h3 {
+  font-size: 2.4rem;
+  margin: 0.8rem 0;
+}
+
+.modal-medium {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.modal-description {
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+.close-button {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.75rem;
+  border: none;
+  background: transparent;
+  color: #8f1d2c;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* ART PAGE */
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 1.25rem;
+}
+
+.art-card {
+  border: 2px solid #8f1d2c;
+  padding: 1.5rem;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.art-card:hover {
+  transform: translateY(-8px);
+}
+
+.art-card h2 {
+  font-size: 1.55rem;
+  line-height: 1.05;
+}
+
+.art-card p {
+  font-size: 0.98rem;
+}
+
+.art-link {
+  margin-top: auto;
+  font-size: 1rem;
+  text-decoration: underline;
+}
+.art-card iframe {
+  width: 100%;
+  height: 280px;
+  border: none;
+  margin: 10px 0;
+}
+.digital-page .modal-content {
+  width: min(800px, 85%);
+  margin: auto;
+  padding: 1.8rem;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;  
+  gap: 1rem; 
+  align-items: center;
+}
+
+.digital-page .modal-content img {
+  width: 100%;
+  max-width: 420px;
+}
+
+.digital-page .modal-text {
+  padding: 0;
+  margin-left: -10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 160px;
+
+}
+
+.digital-page .modal-text h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.digital-page .modal-description {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  max-width: 24ch;
+}
+
+/* MOBILE */
+
+@media (max-width: 950px) {
+  .landing-grid,
+  .gallery-grid,
+  .art-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 950px) {
+  .landing-grid,
+  .gallery-grid,
+  .art-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-page,
+  .page {
+    width: 94%;
+    padding-top: 1.5rem;
+  }
+
+  .landing-title,
+  h1 {
+    font-size: 2.7rem;
+  }
+
+  .landing-copy,
+  .intro {
+    font-size: 1rem;
+  }
+
+  .site-nav {
+    gap: 1rem;
+  }
+
+  .site-nav a {
+    font-size: 1rem;
+  }
+
+  .landing-grid,
+  .gallery-grid,
+  .art-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-card {
+    min-height: 130px;
+    padding: 1rem 1.1rem;
+  }
+    .landing-card h2 {
+    font-size: 1.9rem;
+  }
+  }
+
+  .art-card iframe {
+    height: 240px;
+  }
+
+  .modal-content {
+    width: 94%;
+    padding: 0.8rem;
+  }
+
+  .modal-text {
+    padding: 1rem 0.4rem;
+  }
+
+  .modal-text h3 {
+    font-size: 1.8rem;
+  }
+
+  .modal-description,
+  .modal-medium {
+    font-size: 1rem;
+  }
+
+
+.about-card {
+  border: 2px solid #8f1d2c;
+
+}
+@media (max-width: 950px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+}
+.about-card h2 {
+  position: relative;
+  display: auto;
+}
+
+.about-card h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 180px;
+  height: 2.25px;
+  background: #8f1d2c;
+} 
