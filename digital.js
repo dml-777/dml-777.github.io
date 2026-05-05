@@ -140,7 +140,7 @@ const modalBackdrop = document.querySelector(".modal-backdrop");
 
 function openModal(photo) {
   modalImage.src = photo.file;
-  modalImage.alt = photo.alt;
+  modalImage.alt = photo.title;
   modalTitle.textContent = photo.title;
   modalMedium.textContent = photo.medium;
   modalDescription.textContent = photo.description;
@@ -164,7 +164,7 @@ function renderGallery() {
     button.className = "gallery-item";
     button.type = "button";
     button.setAttribute("aria-label", `Open ${photo.title} photo`);
-    button.innerHTML = `<img src="${photo.file}" alt="${photo.alt}">`;
+    button.innerHTML = `<img src="${photo.file}" alt="${photo.title}">`;
 
     button.addEventListener("click", () => {
       openModal(photo);

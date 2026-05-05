@@ -103,6 +103,96 @@ const photos = [
     file: "film/photo21.jpg",
     title: "Pause?",
     description: "Canon 35mm film",
+  },
+   {
+    file: "film/photo22.jpg",
+    title: "3-course meal",
+    description: "Fujifilm 35mm film",
+  },
+  {
+    file: "film/photo23.jpg",
+    title: "Gr8 summer",
+    description: "Fujifilm 35mm film",
+  },
+  {
+    file: "film/photo24.jpg",
+    title: "House of balloons",
+    description: "Fujifilm 35mm ",
+  },
+  {
+    file: "film/photo25.jpg",
+    title: "Oxford grad '24",
+    description: "Fujifilm 35mm film",
+  },
+  {
+    file: "film/photo26.jpg",
+    title: "Hotdog bday",
+    description: "Fujifilm 35mm",
+  },
+  {
+    file: "film/photo27.jpg",
+    title: "With the flow",
+    description:"Fujifilm 35mm film"
+  },
+  {
+    file: "film/photo28.jpg",
+    title: "Ferry views",
+    description: "Fujifilm 35mm",
+  },
+  {
+    file: "film/photo29.jpg",
+    title: "03/06/26",
+    description: "Fujifilm 35mm",
+  },
+  {
+    file: "film/photo30.jpg",
+    title: "Capture Me",
+    description: "Fujifilm 35mm ",
+  },
+  {
+    file: "film/photo31.jpg",
+    title: "Buddakan",
+    description: "35mm film",
+  },
+  {
+    file: "film/photo32.jpg",
+    title: "Siblings",
+    description: "35mm film",
+  },
+  {
+    file: "film/photo33.jpg",
+    title: "Chinatown",
+    description: "Fujifilm 35mm",
+  },
+  {
+    file: "film/photo34.jpg",
+    title: "Moi",
+    description: "Fujifilm 35mm",
+  },
+  {
+    file: "film/photo35.jpg",
+    title: "Burgers",
+    description: "Fujifilm 35mm",
+  },
+  {
+    file: "film/photo36.jpg",
+    title: "Fish x Amtrak",
+    description: "Canon 35mm film",
+  },
+  {
+    file: "film/photo37.jpg",
+    title: "43 Bay",
+    description: "Canon 35mm film",
+  },
+  {
+    file: "film/photo38.jpg",
+    title: "Opera House",
+    description: "Canon 35mm film",
+  },
+  {
+    file: "film/photo39.jpg",
+    title: "Coy",
+    description: "Canon 35mm film",
   }
 ];
 
@@ -117,11 +207,10 @@ const modalBackdrop = document.querySelector(".modal-backdrop");
 
 function openModal(photo) {
   modalImage.src = photo.file;
-  modalImage.alt = photo.alt;
+  modalImage.alt = photo.title;
   modalTitle.textContent = photo.title;
-  modalMedium.textContent = photo.medium;
-  modalDescription.textContent = photo.description;
-
+  modalMedium.textContent = photo.description;
+modalDescription.textContent = "";
   modal.classList.add("active");
   modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
@@ -141,7 +230,7 @@ function renderGallery() {
     button.className = "gallery-item";
     button.type = "button";
     button.setAttribute("aria-label", `Open ${photo.title} photo`);
-    button.innerHTML = `<img src="${photo.file}" alt="${photo.alt}">`;
+    button.innerHTML = `<img src="${photo.file}" alt="${photo.title}">`;
 
     button.addEventListener("click", () => {
       openModal(photo);
