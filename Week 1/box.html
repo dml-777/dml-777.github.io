@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Simple Navbar | Inline-Block</title>
+<!-- Internal Style Sheet -->
+    <style type="text/CSS">
+        /* Universal selector is always the first style, you want a massive reset or 
+        default which you overwrite with mre specific styles further down. */
+    *{
+    margin: 0;
+    padding: 0;
+    }
+    body{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    ul{
+/* remove all bullet points */
+list-style-type: none;
+overflow: hidden;
+background-color: cornflowerblue;
+/* Make the parent elements font size 0 when using inline block
+to gte rid of the tiny annoying soace betwene letters (because inline usually for text).
+ */
+
+}
+li{
+/* li display blokc by default. they dont want to share horiuztonal space with other elements 
+we are making these LIs dispaly in-lkine blokc awhihc allows us to size elements like blokc
+but we can also stack elements horiztally..  */
+display: inline-block;
+font-size: 1rem;
+
+
+}
+
+
+    }
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li>
+            <a
+              class="active"
+              href="#"
+              >Link 2</a
+            >
+          </li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  </body>
+</html>
