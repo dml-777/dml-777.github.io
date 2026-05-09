@@ -434,20 +434,19 @@ body.dark .modal-content {
   }
 
 .top-theme-toggle {
-  position: static;
-  display: block;
-  width: fit-content;
-  margin-left: auto;
-  margin-bottom: 1.2rem;
-  font-size: 0.85rem;
-  padding: 0.5rem 0.9rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+
+  font-size: 0.75rem;
+  padding: 0.45rem 0.8rem;
 }
 
-  .landing-page,
-  .page {
-    width: 94%;
-    padding-top: 2rem;
-  }
+.landing-page,
+.page {
+  position: relative;
+}
 
   .landing-grid,
   .about-layout,
