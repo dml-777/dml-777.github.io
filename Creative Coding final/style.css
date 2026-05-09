@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000; /* pure black for arcade vibe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: monospace;
+}
+
+canvas {
+  border: 4px solid #ff5bd7; /* neon border */
+  box-shadow: 0 0 20px #ff5bd7;
+}
