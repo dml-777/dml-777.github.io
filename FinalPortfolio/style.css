@@ -73,7 +73,6 @@ body.dark .top-theme-toggle:hover {
   margin: 0 auto;
   padding: 3rem 0 4rem;
 }
-
 .landing-hero {
   max-width: 760px;
   margin: 0 auto 3rem;
@@ -425,6 +424,8 @@ body.dark .modal-content {
   font-size: 0.85rem;
   line-height: 1.35;
 
+}
+
 /* MOBILE */
 
 @media (max-width: 768px) {
@@ -432,17 +433,20 @@ body.dark .modal-content {
     font-size: 72%;
   }
 
-  .top-theme-toggle {
-    top: 18px;
-    right: 18px;
-    font-size: 0.85rem;
-    padding: 0.5rem 0.8rem;
-  }
+.top-theme-toggle {
+  position: static;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-bottom: 1.2rem;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.9rem;
+}
 
   .landing-page,
   .page {
     width: 94%;
-    padding-top: 5rem;
+    padding-top: 2rem;
   }
 
   .landing-grid,
